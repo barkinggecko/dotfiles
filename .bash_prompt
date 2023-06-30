@@ -82,7 +82,7 @@ function set_git_branch {
 # Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
-  PROMPT_SYMBOL="${YELLOW}${AWS_PROFILE} ${LIGHT_GRAY}]\$${COLOR_NONE}"
+  PROMPT_SYMBOL="${YELLOW}${AWS_PROFILE} ${LIGHT_GRAY}\$${COLOR_NONE}"
 }
 
 # Set the full bash prompt.
