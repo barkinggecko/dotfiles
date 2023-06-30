@@ -1,0 +1,21 @@
+# Simple function to switch aws profiles with the help of awsudo
+# function name awss (with extra 's') just used for easiness and laziness (just one more key push)
+# you can change fucntion name as you wish but remember to use the same in auto-complete code too.
+
+function awss(){
+  FILEPATH="/tmp/temp-env.txt"
+  if [ "$#" -le 1 ] ; then
+    echo  "Run awss command to switch profile.\n\tUsage: awss <profile-name> <any-other-optional-command(s)>.\n\t\tExample: awss admin-test-aws-acc-1 \n\t\tExample: awss read-test-aws-acc-2 aws s3 ls"
+    awsudo "${1}" > $FILEPATH
+    while read p; do
+      export "${p}"
+    done <$FILEPATH
+    export AWS_PROFILE=${1}
+  else
+    export AWS_PROFILE=${1}
+    awsudo "${1}" -- "${2}" "${@:3}"
+  fi 
+  if [ -f "$FILEPATH" ] ; then
+    rm "$FILEPATH"
+  fi
+}
