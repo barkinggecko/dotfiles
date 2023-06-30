@@ -2,9 +2,8 @@
 #
 # DESCRIPTION:
 #
-#   Set the bash prompt according to: (well there is k9s, but this is highly customizable as you wish; like I did :D)
+#   Set the bash prompt according to: 
 #    * current AWS profile configured (really helpful if you are switching AWS accounts frequently)
-#    * current context of Kubernetes(K8S) cluster ( also helpful to see which cluster you are working on
 #    * the active virtualenv
 #    * the branch/status of the current git repository
 #    * the return value of the previous command
@@ -18,7 +17,7 @@
 #        . ~/.bash_prompt
 # AUTHOR:
 #
-#   Manoj Prasanna Handapangoda <hmdmph@gmail.com>
+#   Cristian Southall, adapted from Manoj Prasanna Handapangoda <hmdmph@gmail.com>
 #
 # LINEAGE:
 #
