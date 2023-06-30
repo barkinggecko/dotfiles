@@ -1,2 +1,2 @@
 # dotfiles
-Home directory dotfiles foe new installs and codespaces.
+*nix dotfiles for new installs and codespaces.
